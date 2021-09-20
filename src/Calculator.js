@@ -8,8 +8,10 @@ class Calculator extends Component {
         <div id="calculator">
             <div id="displayContainer">
                 {/* <p className="input">{this.props.input}</p> */}
-                <h4 className="operation">
-                {this.props.preview === "" ? this.props.operation : this.props.preview}</h4>
+                <div className="operation">
+
+                    {this.props.operation === "" ? <br /> : this.props.preview === "" ? this.props.operation : this.props.preview}
+                </div>
                 <h1 id="display" className="result">
                 {this.props.result === "0" ?  "0" : this.props.result}
                 </h1>

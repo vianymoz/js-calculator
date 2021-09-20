@@ -29,6 +29,13 @@ class App extends Component {
               preview: "",
               result: this.state.input + e.target.value
             });
+        } else if(e.target.value === "0" && this.state.input === ""){
+          this.setState({
+            input: e.target.value,
+            operation: this.state.operation,
+            preview: "",
+          });
+  
         } else {
           this.setState({
             input: e.target.value,
@@ -37,13 +44,6 @@ class App extends Component {
           });
         }
         
-      } else if(e.target.value === "0" && this.state.input === ""){
-        this.setState({
-          input: e.target.value,
-          operation: this.state.operation,
-          preview: "",
-        });
-
       } else if (e.target.value !== "0" && this.state.operation === "0"){
         this.setState({
           input: e.target.value,
@@ -210,7 +210,7 @@ class App extends Component {
   handleClear(e){
     this.setState({
       input: "",
-      operation: "0",
+      operation: "",
       preview: "",
       result: "0"
     });
@@ -219,7 +219,7 @@ class App extends Component {
 
   render (){
     return (
-      <div className="App">
+      <div id="App">
         <Calculator getNumber={this.getNumber}
         handleOperator={this.handleOperator}
         handleResult={this.handleResult}
@@ -229,6 +229,13 @@ class App extends Component {
         preview={this.state.preview} 
         result={this.state.result}
          />
+
+         <div id="author">
+          <p>Designed and Coded by</p> 
+          <a href="vianymoz.github.io/js-calculator/" target="_blank">
+            @vianymoz
+          </a>
+         </div>
       </div>
       
     );

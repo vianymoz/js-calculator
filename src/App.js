@@ -232,7 +232,7 @@ class App extends Component {
 
          <div id="author">
           <p>Designed and Coded by</p> 
-          <a href="https://vianymoz.github.io/js-calculator/" target="_blank">
+          <a href="https://github.com/vianymoz/js-calculator" target="_blank">
             @vianymoz
           </a>
          </div>
